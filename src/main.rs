@@ -18,7 +18,7 @@ fn main() -> io::Result<()> {
 
     for entry in entries {
         let date_line =
-            translate_month(&entry.lines().next().unwrap().split(" der ").last().unwrap());
+            translate_month(entry.lines().next().unwrap().split(" der ").last().unwrap());
 
         if date_line.starts_with("//") {
             continue;
